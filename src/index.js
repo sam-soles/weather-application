@@ -31,6 +31,7 @@ function showDay() {
     weekDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
 }
 showDay();
+
 function showTime() {
     let now = new Date();
     let currentHour = now.getHours();

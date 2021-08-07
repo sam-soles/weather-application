@@ -5,27 +5,25 @@
   width: 290px;
   border-radius: 13px;
   border-width: thin;
-  border-top-style: solid;
-  border-left-style: solid;
   border-color: lightgrey;
   padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#city-input {
-  border-radius: 10px;
-  padding: 5px 10px;
-  background-color: blue;
-  color: white;
-  border-width: thin;
-}
+#city-input,
 #location-button {
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: green;
   color: white;
   border-width: thin;
+  background-color: #0881a3;
+  width: 120px;
+  border-color: rgba(50, 50, 93, 0.25);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
+
 .card {
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .current-temp {
   border-radius: 24px;
@@ -39,18 +37,13 @@
 #numerical-temperature {
   font-size: 50px;
 }
-#vertical-line {
-  font-size: 18px;
-  vertical-align: super;
-}
-#celsius {
-  font-size: 18px;
-  vertical-align: super;
-}
+#vertical-line,
+#celsius,
 #farenheit {
   font-size: 18px;
   vertical-align: super;
 }
+
 #city {
   font-size: 35px;
   padding: 0;
@@ -63,27 +56,24 @@
   display: block;
   width: 45rem;
   border-radius: 31px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
 }
-.saturday {
-  margin-top: 10px;
-  width: 300px;
-}
-.sunday {
-  margin-top: 15px;
-  width: 300px;
-}
-.monday {
-  margin-top: 15px;
-  width: 300px;
-}
-.tuesday {
-  margin-top: 15px;
-  width: 300px;
-}
+.sunday,
+.monday,
+.tuesday,
 .wednesday {
   margin-top: 15px;
   width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.saturday {
+  margin-top: 10px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .github-link {
   margin-left: 332px;
 }
