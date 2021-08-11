@@ -45,6 +45,7 @@ showTime();
 
 function displayWeatherCondition(response) {
     let iconElement = document.querySelector("#weather-icon");
+    celsiusTemperature = response.data.main.temp;
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#numerical-temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#weather-description").innerHTML =
@@ -96,10 +97,22 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 function showFarenheit(event) {
     event.preventDefault();
   let numericalTemp = document.querySelector("#numerical-temperature");
-  numericalTemp.innerHTML = "74";
+  numericalTemp.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
+}
+
+function showCelsius(event) {
+    event.preventDefault();
+  let numericalTemp = document.querySelector("#numerical-temperature");
+  numericalTemp.innerHTML = Math.round(celsiusTemperature);
 }
 
 let farenheit = document.querySelector("#fahrenheit-link");
 farenheit.addEventListener("click", showFarenheit);
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", showCelsius);
+
+let celsiusTemperature = null;
+
 showDay();
 search("Montreal");
