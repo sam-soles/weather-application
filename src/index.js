@@ -30,7 +30,6 @@ function showDay() {
     let weekDay = document.querySelector("#full-date");
     weekDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
 }
-showDay();
 
 function showTime() {
     let now = new Date();
@@ -45,10 +44,18 @@ function showTime() {
 showTime();
 
 function displayWeatherCondition(response) {
+    let iconElement = document.querySelector("#weather-icon");
     document.querySelector("#city").innerHTML = response.data.name;
-    document.querySelector("#numerical-temperature").innerHTML = `${Math.round(response.data.main.temp)}°C`;
+    document.querySelector("#numerical-temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#weather-description").innerHTML =
         response.data.weather[0].main;
+   document.querySelector("#humidity-input").innerHTML = response.data.main.humidity;
+   document.querySelector("#wind-input").innerHTML = Math.round(response.data.wind.speed);
+   iconElement.setAttribute(
+  "src",
+   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {
@@ -73,8 +80,26 @@ function getCurrentLocation(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+function search(city) {
+  let apiKey = "92c9508b64de79dcf9e21b52f567f308";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
 let searchForm = document.querySelector("#search-engine");
 searchForm.addEventListener("submit", searchCity);
 
 let currentLocationButton = document.querySelector("#location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function showFarenheit(event) {
+    event.preventDefault();
+  let numericalTemp = document.querySelector("#numerical-temperature");
+  numericalTemp.innerHTML = "74";
+}
+
+let farenheit = document.querySelector("#fahrenheit-link");
+farenheit.addEventListener("click", showFarenheit);
+showDay();
+search("Montreal");
