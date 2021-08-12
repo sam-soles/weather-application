@@ -30,7 +30,6 @@ function showDay() {
     let weekDay = document.querySelector("#full-date");
     weekDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
 }
-
 function showTime() {
     let now = new Date();
     let currentHour = now.getHours();
@@ -96,15 +95,20 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 function showFarenheit(event) {
     event.preventDefault();
-  let numericalTemp = document.querySelector("#numerical-temperature");
-  numericalTemp.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
+    celsius.classList.remove("active");
+    farenheit.classList.add("active");
+    let numericalTemp = document.querySelector("#numerical-temperature");
+    numericalTemp.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
 }
 
 function showCelsius(event) {
     event.preventDefault();
-  let numericalTemp = document.querySelector("#numerical-temperature");
-  numericalTemp.innerHTML = Math.round(celsiusTemperature);
+    celsius.classList.add("active");
+    farenheit.classList.remove("active");
+    let numericalTemp = document.querySelector("#numerical-temperature");
+    numericalTemp.innerHTML = Math.round(celsiusTemperature);
 }
+
 
 let farenheit = document.querySelector("#fahrenheit-link");
 farenheit.addEventListener("click", showFarenheit);

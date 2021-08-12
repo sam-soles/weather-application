@@ -28,7 +28,7 @@
 .current-temp {
   border-radius: 24px;
   height: 351px;
-  width: 18rem;
+  width: 32rem;
   margin: 10px 25px;
   padding-top: 27px;
   padding-left: 25px;
@@ -42,6 +42,39 @@
 #farenheit {
   font-size: 18px;
   vertical-align: super;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+  vertical-align: top;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+  vertical-align: bottom;
+}
+
+.weather-temperature #fahrenheit-link {
+  text-decoration: none;
+}
+.weather-temperature #celsius-link {
+  text-decoration: none;
+}
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 #city {
@@ -76,4 +109,5 @@
 
 .github-link {
   margin-left: 332px;
+  text-decoration: none;
 }
