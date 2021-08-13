@@ -40,7 +40,6 @@ function showTime() {
     let currentTime = document.querySelector("#current-time");
     currentTime.innerHTML = `${currentHour}:${currentMinute}`;
 }
-showTime();
 
 function displayWeatherCondition(response) {
     let iconElement = document.querySelector("#weather-icon");
@@ -109,7 +108,6 @@ function showCelsius(event) {
     numericalTemp.innerHTML = Math.round(celsiusTemperature);
 }
 
-
 let farenheit = document.querySelector("#fahrenheit-link");
 farenheit.addEventListener("click", showFarenheit);
 
@@ -119,4 +117,5 @@ celsius.addEventListener("click", showCelsius);
 let celsiusTemperature = null;
 
 showDay();
+showTime();
 search("Montreal");
