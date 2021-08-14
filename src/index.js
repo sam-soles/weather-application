@@ -28,7 +28,7 @@ function showDay() {
     let currentDate = now.getDate();
     let currentYear = now.getFullYear();
     let weekDay = document.querySelector("#full-date");
-    weekDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
+    weekDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate} ${currentYear}`;
 }
 function showTime() {
     let now = new Date();

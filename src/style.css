@@ -111,3 +111,11 @@
   margin-left: 332px;
   text-decoration: none;
 }
+
+#current-forecast-card {
+  width: 22rem;
+}
+
+#full-outline {
+  width: 48rem;
+}

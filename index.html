@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <div class="card outline">
+        <div class="card outline" id="full-outline">
             <div class="card-body">
                 <form class="search-form" id="search-engine">
                     <div class="row">
@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-3">
                             <button id="location-button">
-                                My location
+                                My location 
                             </button>
                         </div>
                     </div>
@@ -36,33 +36,65 @@
                 <br />
                 <div class="row">
                     <div class="col">
-                        <div class="card current-temp">
+                        <div class="card current-temp" id="current-forecast-card">
                             <div class="card-body">
                                 <h5 id="city"></h5>
-                                <div class="row">
-                                    <div class="col-6">
                                         <div class= "clearfix weather-temperature">
                                 <h6><img src="" alt="" id="weather-icon" class="float-left" /><span id="numerical-temperature"></span>
                                     <span class="units"><a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></h6></div>
-                                    </div>
-                                    <div class="col-6">
-                                    <div id="humidity-text">Humidity: <span id="humidity-input"></span> %</div>
-                                    <div id="wind-text">Wind: <span id="wind-input"></span> km/h</div>
+                                    <div>Forecast: <strong><span id="weather-description"></span></strong></div>
+                                    <div id="humidity-text">Humidity: <strong><span id="humidity-input"></span> %</strong></div>
+                                    <div id="wind-text">Wind: <strong><span id="wind-input"></span> km/h</strong></div>
+                                    </br>
+                                <div class="date-time">
+                                    <span>Last updated: </span>
+                                </br>
+                                <strong><span id="full-date"></span> at <span id="current-time"></span></strong>
+                                </div>
+                                    </div>      
+                            </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="card saturday">
+                                        <div class="card-body">
+                                            Saturday 22°C 🌦
+                                        </div>
                                     </div>
                                 </div>
-                                <p class="date-time"><span id="weather-description"></span>
-                                    </br>
-                                    <span id="full-date"></span>
-                                    <br />
-                                    <span id="current-time">Hello</span>
-                                </p>
+                                <div class="row">
+                                    <div class="card sunday">
+                                        <div class="card-body">
+                                            Sunday 26°C 🌤
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card monday">
+                                        <div class="card-body monday-text">
+                                            Monday 28°C 🌥
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card tuesday">
+                                        <div class="card-body">
+                                            Tuesday 21°C ⛈
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card wednesday">
+                                        <div class="card-body">
+                                            Wednesday 19°C 🌥
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
-        </div>
         <p><a href="https://github.com/sam-soles/weather-application" target="_blank" class="github-link">Open-source code</a> by Sam Soles</p>
     </div>
     <script src="src/index.js"></script>
