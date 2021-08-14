@@ -45,18 +45,14 @@ function displayForecast() {
  let forecastElement = document.querySelector("#weather-forecast");
 
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-let forecastHTML = `<div class="col">`;
+let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
   forecastHTML =
       forecastHTML +
       `
-     <div class="row">
-     <div class="card">
     <div class="card-body">
     <span id="day-name">${day}</span></br><span id="forecast-icon"> 🌤 </span><span id="forecast-high">
     22</span>° | <span id="forecast-low">72</span>°
-    </div>
-    </div>
     </div>
   `;
   })
