@@ -41,6 +41,29 @@ function showTime() {
     currentTime.innerHTML = `${currentHour}:${currentMinute}`;
 }
 
+function displayForecast() {
+ let forecastElement = document.querySelector("#weather-forecast");
+
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+let forecastHTML = `<div class="col">`;
+  days.forEach(function (day) {
+  forecastHTML =
+      forecastHTML +
+      `
+     <div class="row">
+     <div class="card">
+    <div class="card-body">
+    <span id="day-name">${day}</span></br><span id="forecast-icon"> 🌤 </span><span id="forecast-high">
+    22</span>° | <span id="forecast-low">72</span>°
+    </div>
+    </div>
+    </div>
+  `;
+  })
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+  
 function displayWeatherCondition(response) {
     let iconElement = document.querySelector("#weather-icon");
     celsiusTemperature = response.data.main.temp;
@@ -119,3 +142,4 @@ let celsiusTemperature = null;
 showDay();
 showTime();
 search("Montreal");
+displayForecast();

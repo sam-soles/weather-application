@@ -21,7 +21,7 @@
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.card {
+.card .forecast {
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -29,7 +29,6 @@
   border-radius: 24px;
   height: 351px;
   width: 32rem;
-  margin: 10px 25px;
   padding-top: 27px;
   padding-left: 25px;
 }
@@ -92,19 +91,12 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
 }
-.sunday,
-.monday,
-.tuesday,
-.wednesday {
-  margin-top: 15px;
-  width: 300px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
 
-.saturday {
-  margin-top: 10px;
-  width: 300px;
+#weather-forecast {
+  margin-top: 15px 20px;
+  width: 18rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 24px;
 }
 
 .github-link {
