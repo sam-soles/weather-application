@@ -1,3 +1,7 @@
+body {
+  font-family: "Cabin", sans-serif;
+}
+
 #city-search {
   margin: 0 25px;
   display: block;
@@ -26,6 +30,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .current-temp {
+  margin: 0 25px;
   border-radius: 24px;
   height: 351px;
   width: 32rem;
@@ -80,9 +85,7 @@
   font-size: 35px;
   padding: 0;
 }
-.activity-link {
-  height: 72px;
-}
+
 .outline {
   margin: 30px auto;
   display: block;
@@ -93,10 +96,9 @@
 }
 
 #weather-forecast {
-  margin-top: 15px 20px;
-  width: 18rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 24px;
+  background-color: white;
 }
 
 .github-link {
@@ -105,7 +107,7 @@
 }
 
 #current-forecast-card {
-  width: 22rem;
+  width: 18rem;
 }
 
 #full-outline {

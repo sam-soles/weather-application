@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
 
@@ -19,11 +20,11 @@
                 <form class="search-form" id="search-engine">
                     <div class="row">
                         <div class="col-6">
-                            <input type="search" placeholder="Search city name" autofocus="on" autocomplete="off"
+                            <input type="search" placeholder="Type city name" autofocus="on" autocomplete="off"
                                 id="city-search" class="form-control shadow-sm" />
                         </div>
-                        <div class="col-3">
-                            <input type="submit" value="Search"
+                        <div class="col-2">
+                            <input type="submit" value="Search city"
                                 id="city-input" />
                         </div>
                         <div class="col-3">
@@ -49,19 +50,18 @@
                                 <div class="date-time">
                                     <span>Last updated: </span>
                                 </br>
-                                <strong><span id="full-date"></span> at <span id="current-time"></span></strong>
+                                <strong><span id="full-date"></span></br><span id="current-time"></span></strong>
                                 </div>
                                     </div>      
                             </div>
                             </div>
-                            <div class="forecast" id="weather-forecast">
-                                <div class ="col">
+                            <div class="forecast" id="weather-forecast">     
+</div>                                    
+</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    
         <p><a href="https://github.com/sam-soles/weather-application" target="_blank" class="github-link">Open-source code</a> by Sam Soles</p>
     </div>
     <script src="src/index.js"></script>

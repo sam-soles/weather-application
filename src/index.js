@@ -40,22 +40,38 @@ function showTime() {
     let currentTime = document.querySelector("#current-time");
     currentTime.innerHTML = `${currentHour}:${currentMinute}`;
 }
+function getForecast(coordinates) {
+   let apiKey = "92c9508b64de79dcf9e21b52f567f308";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast); 
+}
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-function displayForecast() {
+  return days[day];
+}
+
+function displayForecast(response) {
+let dailyForecast = response.data.daily;
  let forecastElement = document.querySelector("#weather-forecast");
-
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+let forecastHTML = `<div class="card card-body row">`;
+  dailyForecast.forEach(function (forecastDay, index) {if (index < 5) {
   forecastHTML =
       forecastHTML +
       `
-    <div class="card-body">
-    <span id="day-name">${day}</span></br><span id="forecast-icon"> 🌤 </span><span id="forecast-high">
-    22</span>° | <span id="forecast-low">72</span>°
-    </div>
+    <span id="day-name">${formatDay(forecastDay.dt)}</span></br>
+    <span id="forecast-icon"><img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="42"
+        /></span><span id="forecast-high">
+    ${Math.round(forecastDay.temp.max)}</span>° | <span id="forecast-low">${Math.round(forecastDay.temp.min)}</span>°
   `;
-  })
+  }})
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -74,6 +90,8 @@ function displayWeatherCondition(response) {
    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+getForecast(response.data.coord);
+resetForm();
 }
 
 function searchCity(event) {
