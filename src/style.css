@@ -1,5 +1,6 @@
 body {
   font-family: "Cabin", sans-serif;
+  background: #fdf5e6;
 }
 
 #city-search {
@@ -19,7 +20,7 @@ body {
   padding: 5px 10px;
   color: white;
   border-width: thin;
-  background-color: #0881a3;
+  background: #272343;
   width: 120px;
   border-color: rgba(50, 50, 93, 0.25);
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -41,12 +42,6 @@ body {
 #numerical-temperature {
   font-size: 50px;
 }
-#vertical-line,
-#celsius,
-#farenheit {
-  font-size: 18px;
-  vertical-align: super;
-}
 
 .weather-temperature img {
   margin-right: 5px;
@@ -65,22 +60,6 @@ body {
   vertical-align: bottom;
 }
 
-.weather-temperature #fahrenheit-link {
-  text-decoration: none;
-}
-.weather-temperature #celsius-link {
-  text-decoration: none;
-}
-.weather-temperature .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
 #city {
   font-size: 35px;
   padding: 0;
@@ -89,16 +68,20 @@ body {
 .outline {
   margin: 30px auto;
   display: block;
-  width: 45rem;
+  width: 38rem;
   border-radius: 31px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
 }
 
 #weather-forecast {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 24px;
   background-color: white;
+  width: 16rem;
+  border-radius: 24px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 25px;
+  text-align: center;
 }
 
 .github-link {
@@ -106,8 +89,15 @@ body {
   text-decoration: none;
 }
 
+#underline {
+  color: #dcdcdc;
+  font-weight: lighter;
+}
+
 #current-forecast-card {
   width: 18rem;
+  height: 22rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #full-outline {

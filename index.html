@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
-
 <body>
     <div class="container">
         <div class="card outline" id="full-outline">
@@ -42,7 +41,7 @@
                                 <h5 id="city"></h5>
                                         <div class= "clearfix weather-temperature">
                                 <h6><img src="" alt="" id="weather-icon" class="float-left" /><span id="numerical-temperature"></span>
-                                    <span class="units"><a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></h6></div>
+                                    <span class="units">°C</span></h6></div>
                                     <div>Forecast: <strong><span id="weather-description"></span></strong></div>
                                     <div id="humidity-text">Humidity: <strong><span id="humidity-input"></span> %</strong></div>
                                     <div id="wind-text">Wind: <strong><span id="wind-input"></span> km/h</strong></div>
@@ -51,18 +50,19 @@
                                     <span>Last updated: </span>
                                 </br>
                                 <strong><span id="full-date"></span></br><span id="current-time"></span></strong>
-                                </div>
+                            </br>
+                            </div>
                                     </div>      
                             </div>
+                            
                             </div>
                             <div class="forecast" id="weather-forecast">     
 </div>                                    
 </div>
                                 </div>
                             </div>
-                        </div>
-                    
-        <p><a href="https://github.com/sam-soles/weather-application" target="_blank" class="github-link">Open-source code</a> by Sam Soles</p>
+
+        <div><a href="https://github.com/sam-soles/weather-application" target="_blank" class="github-link">Open-source code</a> by Sam Soles</div>
     </div>
     <script src="src/index.js"></script>
 </body>
