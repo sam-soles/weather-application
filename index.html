@@ -20,11 +20,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <input type="search" placeholder="Type city name" autofocus="on" autocomplete="off"
-                                id="city-search" class="form-control shadow-sm float-left" />
+                                id="city-input" class="form-control shadow-sm" />
                         </div>
                         <div class="col-sm-2 search-button">
                             <input type="submit" value="Search city"
-                                id="city-input" />
+                                id="city-search-button" />
                         </div>
                         <div class="col-sm-2">
                             <button id="location-button">
@@ -35,13 +35,13 @@
                 </form>
                 <br />
                 <div class="row">
-                    <div class="col-6" id="primary-card">
-                        <div class="card current-temp" id="current-forecast-card">
+                    <div class="col-6">
+                        <div class="card current-temp">
                             <div class="card-body">
                                 <h5 id="city"></h5>
-                                        <div class= "clearfix weather-temperature">
+                                <div class= "clearfix weather-temperature">
                                 <h6><img src="" alt="" id="weather-icon" class="float-left" /><span id="numerical-temperature"></span>
-                                    <span class="units">°C</span></h6></div>
+                                    <span class="unit">°C</span></h6></div>
                                     <div>Forecast: <strong><span id="weather-description"></span></strong></div>
                                     <div id="humidity-text">Humidity: <strong><span id="humidity-input"></span> %</strong></div>
                                     <div id="wind-text">Wind: <strong><span id="wind-input"></span> km/h</strong></div>
@@ -52,19 +52,16 @@
                                 <strong><span id="full-date"></span></br><span id="current-time"></span></strong>
                             </br>
                             </div>
-                                    </div>      
+                            </div>      
                             </div>
-                            
                             </div>
-                            <div class="forecast" id="weather-forecast">     
-</div>                                    
+                            <div class="forecast" id="weather-forecast"></div>                                    
 </div>
                                 </div>
                             </div>
 
-        <div><a href="https://github.com/sam-soles/weather-application" target="_blank" class="github-link">Open-source code</a> by Sam Soles</div>
+        <div id="footer">Thank you for viewing this page! <a href="https://github.com/sam-soles/weather-application" target="_blank" class="github-link">Open-source code</a> by Sam Soles.</div>
     </div>
     <script src="src/index.js"></script>
 </body>
-
 </html>
