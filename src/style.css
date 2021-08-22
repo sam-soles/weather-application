@@ -1,6 +1,5 @@
 body {
   font-family: "Cabin", sans-serif;
-  background: #fdf5e6;
 }
 
 #city-search {
@@ -37,10 +36,12 @@ body {
   width: 32rem;
   padding-top: 27px;
   padding-left: 25px;
+  color: #838383;
 }
 
 #numerical-temperature {
   font-size: 50px;
+  color: #3d3d3d;
 }
 
 .weather-temperature img {
@@ -58,19 +59,26 @@ body {
   height: 64px;
   width: 64px;
   vertical-align: bottom;
+  color: #3d3d3d;
 }
 
 #city {
   font-size: 35px;
   padding: 0;
+  color: #3d3d3d;
 }
 
 .outline {
   margin: 30px auto;
   display: block;
-  width: 38rem;
+  width: 46rem;
   border-radius: 31px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: linear-gradient(
+    111.5deg,
+    rgb(228, 247, 255) 21.9%,
+    rgb(255, 216, 194) 92.2%
+  );
 }
 
 #weather-forecast {
@@ -82,8 +90,12 @@ body {
   padding-left: 20px;
   padding-right: 25px;
   text-align: center;
+  color: #3d3d3d;
 }
 
+#forecast-low {
+  color: #838383;
+}
 .github-link {
   margin-left: 332px;
   text-decoration: none;
@@ -99,7 +111,7 @@ body {
   height: 22rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-#full-outline {
-  width: 48rem;
+.search-button {
+  margin-right: 5px;
+  padding-left: 0;
 }

@@ -62,7 +62,7 @@ let forecastHTML = `<div class="row">`;
       forecastHTML +
       `
     <div class="card-body>
-    <span id="day-name">${formatDay(forecastDay.dt)}</span></br>
+    <span id="day-name"><strong>${formatDay(forecastDay.dt)}</strong></span></br>
     <span id="forecast-icon"><img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon

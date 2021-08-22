@@ -18,15 +18,15 @@
             <div class="card-body">
                 <form class="search-form" id="search-engine">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <input type="search" placeholder="Type city name" autofocus="on" autocomplete="off"
-                                id="city-search" class="form-control shadow-sm" />
+                                id="city-search" class="form-control shadow-sm float-left" />
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-2 search-button">
                             <input type="submit" value="Search city"
                                 id="city-input" />
                         </div>
-                        <div class="col-3">
+                        <div class="col-sm-2">
                             <button id="location-button">
                                 My location 
                             </button>
@@ -35,7 +35,7 @@
                 </form>
                 <br />
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6" id="primary-card">
                         <div class="card current-temp" id="current-forecast-card">
                             <div class="card-body">
                                 <h5 id="city"></h5>
